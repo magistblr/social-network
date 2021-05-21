@@ -1,0 +1,38 @@
+
+.dialogs__items {
+  border-right: 2px solid black;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+
+.dialogs__label {
+  font-size: 25px;
+}
+
+.dialogs__item {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+
+.dialogs__item-mark {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: grey;
+  margin-right: 20px;
+}
+
+.dialogs__item-name a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.dialogs__item-name a.active {
+  color: gold;
+}

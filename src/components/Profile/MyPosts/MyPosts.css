@@ -1,0 +1,54 @@
+
+.content__posts {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.posts__post {
+  font-size: 20px;
+}
+
+.posts__new-post {
+  margin-top: 10px;
+}
+
+
+.posts__new-post input {
+  background-color: rgb(218, 219, 219);
+  font-size: 15px;
+  border: none;
+  width: 820px;
+  height: 40px;
+  outline: none
+}
+
+
+.posts__btn {
+  margin-top: 20px;
+}
+
+.posts__btn button {
+  font-size: 20px;
+  color: white;
+  border:none;
+  background-color: rgb(60, 179, 36);
+  width: 70px;
+  height: 40px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.posts__btn button:hover {
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.posts__btn button:active {
+  transform: scale(0.9)
+}
+
+
+.posts__btn {
+  display: flex;
+  justify-content: flex-end;
+}

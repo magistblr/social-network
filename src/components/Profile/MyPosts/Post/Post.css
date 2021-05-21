@@ -1,0 +1,26 @@
+.messages-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+
+.messages__avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.messages__avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+
+.messages__message-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}

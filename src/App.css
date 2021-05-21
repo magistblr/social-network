@@ -1,0 +1,36 @@
+@import "/src/components/Header/Header.css";
+@import "/src/components/Navbar/Navbar.css";
+@import "/src/components/Profile/Profile.css";
+@import "/src/components/Profile/MyPosts/MyPosts.css";
+@import "/src/components/Profile/MyPosts/Post/Post.css";
+@import "/src/components/News/News.css";
+@import "/src/components/Settings/Settings.css";
+@import "/src/components/Music/Music.css";
+@import "/src/components/News/News.css";
+@import "/src/components/Dialogs/Dialogs.css";
+@import "/src/components/Dialogs/DialogItem/DialogItem.css";
+@import "/src/components/Dialogs/Message/Message.css";
+@import "/src/components/Profile/ProfileInfo/ProfileInfo.css";
+@import '/src/fonts.css';
+
+* {
+  font-family: 'Proxima Nova';
+}
+
+
+.app-wrapper {
+  display: grid;
+  grid-template-areas:
+            'header header'
+            'navbar content';
+  grid-gap: 10px;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 70px 1fr;
+  margin: 0 300px 0 300px;
+}
+
+.item {
+  padding: 10px;
+}
+
+

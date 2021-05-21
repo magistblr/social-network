@@ -1,0 +1,41 @@
+
+.dialogs__users-wrapper {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 50px 0 50px;
+}
+
+.dialogs__users {
+  margin-right: 40px;
+  text-align: center;
+}
+
+.dialogs__users img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+
+.dialogs__users-message {
+  position: relative;
+  font-size: 17px;
+  min-height: 50px;
+  max-width: 650px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgb(173, 173, 173);
+}
+
+.dialogs__users-message::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 35px;
+  border: 1px solid;
+  border: none;
+  transform: rotate(45deg);
+  top: 5px;
+  left: -12px;
+  border-radius: 5px;
+  background-color: rgb(173, 173, 173);
+}
