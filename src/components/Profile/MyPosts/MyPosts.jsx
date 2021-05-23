@@ -1,24 +1,26 @@
+import React from 'react';
+
 import Post from "./Post/Post";
 
-const MyPosts = () => {
+const MyPosts = (props) => {
 
-  let posts = [
-    {id: 1, message: 'Hi, how are you?'},
-    {id: 2, message: "It's my first post"}
-  ]
+  let postsElements = props.posts.map( posts => <Post message={posts.message}/>);
 
-  let postsElements = posts.map( posts => <Post message={posts.message}/>);
+  let newPostElement = React.createRef();
 
-
+  let addPost = () => {
+    let text = newPostElement.current.value;
+    props.addPost(text);
+  }
 
   return (
     <div className="content__posts">
       <div className="posts__post">My posts</div>
       <div className="posts__new-post">
-        <input type="text" placeholder="your news..." />
+        <textarea ref={newPostElement} name="text" placeholder="your news..." wrap="soft"/>
       </div>
       <div className="posts__btn">
-        <button>Send</button>
+        <button onClick={addPost}>Send</button>
       </div>
       {postsElements}
     </div>

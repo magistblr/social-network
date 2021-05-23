@@ -1,6 +1,7 @@
 
 const Post = (props) => {
 
+
   return (
     <div className="messages-wrapper">
       <div className="messages__avatar">

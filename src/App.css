@@ -1,5 +1,7 @@
 @import "/src/components/Header/Header.css";
-@import "/src/components/Navbar/Navbar.css";
+@import "/src/components/Sidebar/Sidebar.css";
+@import "/src/components/Sidebar/Navbar/Navbar.css";
+@import "/src/components/Sidebar/Friends/Friends.css";
 @import "/src/components/Profile/Profile.css";
 @import "/src/components/Profile/MyPosts/MyPosts.css";
 @import "/src/components/Profile/MyPosts/Post/Post.css";
@@ -10,6 +12,7 @@
 @import "/src/components/Dialogs/Dialogs.css";
 @import "/src/components/Dialogs/DialogItem/DialogItem.css";
 @import "/src/components/Dialogs/Message/Message.css";
+@import "/src/components/Dialogs/NewMessage/NewMessage.css";
 @import "/src/components/Profile/ProfileInfo/ProfileInfo.css";
 @import '/src/fonts.css';
 

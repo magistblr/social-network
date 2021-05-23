@@ -1,6 +1,8 @@
 
 const Message = (props) => {
 
+
+
   return (
           <div className="dialogs__users-wrapper">
             <div className="dialogs__users">
@@ -11,6 +13,7 @@ const Message = (props) => {
               </div>
             <div className="dialogs__users-message">{props.message}</div>
           </div>
+
   )
 }
 
