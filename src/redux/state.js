@@ -6,7 +6,8 @@ let state = {
     posts: [
       {id: 1, message: 'Hi, how are you?'},
       {id: 2, message: "It's my first post"}
-    ]
+    ],
+    newPostText: ''
   },
 
   dialogsPage: {
@@ -44,19 +45,31 @@ let state = {
       {id: 3, name: 'Sveta'},
     ]
   }
-
-
 }
 
-export let addPost = (postMessage) => {
+//позволяет выводить state в консоли
+window.state = state;
+
+
+//добавление новых постов
+export let addPost = () => {
   let newPost = {
     id: 5,
-    message: postMessage,
+    message: state.profilePage.newPostText,
   };
 
   state.profilePage.posts.push(newPost);
+  state.profilePage.newPostText = '';
   rerenderEntireTree(state);
 }
+
+
+
+export let updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
+    rerenderEntireTree(state);
+};
+
 
 
 
