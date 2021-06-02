@@ -22,10 +22,10 @@ let state = {
 
     messages: [
       {id: 1, message: 'Hi'},
-      {id: 2, message: 'How are you?'},
-      {id: 3, message: 'I am a normal popover and i can have text and everything'},
-      {id: 4, message: 'YO'},
-      {id: 5, message: 'YO'}
+    ],
+
+    friendMessages: [
+      {id: 1, message: 'How are you?'}
     ]
 },
   sidebarPage: {
@@ -54,7 +54,7 @@ window.state = state;
 //добавление новых постов
 export let addPost = () => {
   let newPost = {
-    id: 5,
+    id: 3,
     message: state.profilePage.newPostText,
   };
 

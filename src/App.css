@@ -12,6 +12,7 @@
 @import "/src/components/Dialogs/Dialogs.css";
 @import "/src/components/Dialogs/DialogItem/DialogItem.css";
 @import "/src/components/Dialogs/Message/Message.css";
+@import "/src/components/Dialogs/Message/FriendMessage.css";
 @import "/src/components/Dialogs/NewMessage/NewMessage.css";
 @import "/src/components/Profile/ProfileInfo/ProfileInfo.css";
 @import '/src/fonts.css';
@@ -30,6 +31,7 @@
   grid-template-columns: 250px 1fr;
   grid-template-rows: 70px 1fr;
   margin: 0 300px 0 300px;
+  box-sizing: border-box;
 }
 
 .item {

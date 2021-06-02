@@ -18,7 +18,7 @@ const App = (props ) => {
         <Header/>
         <Sidebar navbar={props.appState.sidebarPage.navbar} friends={props.appState.friendsBar.friends}/>
         <Route path="/profile" render={ () => <Profile profilePage={props.appState.profilePage} addPost={props.addPost} updateNewPostText={props.updateNewPostText}/>}/>
-        <Route path="/dialogs" render={ () => <Dialogs dialogs={props.appState.dialogsPage.dialogs} messages={props.appState.dialogsPage.messages}/>}/>
+        <Route path="/dialogs" render={ () => <Dialogs dialogs={props.appState.dialogsPage.dialogs} messages={props.appState.dialogsPage.messages} friendMessages={props.appState.dialogsPage.friendMessages}/>}/>
         <Route path="/news" render={ () => <News/>}/>
         <Route path="/music" render={ () => <Music/>}/>
         <Route path="/settings" render={ () => <Settings/>}/>

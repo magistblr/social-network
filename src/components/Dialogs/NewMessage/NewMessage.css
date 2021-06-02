@@ -2,11 +2,9 @@
   margin-top: 30px;
   padding-left: 30px;
   border-radius: 10px;
+  box-sizing: border-box;
 }
 
-.new-message {
-
-}
 
 
 
@@ -14,8 +12,8 @@
   background-color: rgb(218, 219, 219);
   font-size: 15px;
   border: none;
-  width: 790px;
-  min-height: 50px;
+  width: 740px;
+  min-height: 70px;
   outline: none;
   resize: none;
   padding: 10px;
