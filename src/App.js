@@ -12,18 +12,21 @@ import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 
 
-const App = (props ) => {
+const App = (props) => {
+console.log(props);
   return (
       <div className="app-wrapper">
         <Header/>
-        <Sidebar navbar={props.appState.sidebarPage.navbar} friends={props.appState.friendsBar.friends}/>
-        <Route path="/profile" render={ () => <Profile profilePage={props.appState.profilePage} addPost={props.addPost} updateNewPostText={props.updateNewPostText}/>}/>
-        <Route path="/dialogs" render={ () => <Dialogs dialogs={props.appState.dialogsPage.dialogs} messages={props.appState.dialogsPage.messages} friendMessages={props.appState.dialogsPage.friendMessages}/>}/>
+        <Sidebar navbar={props.state.sidebarPage.navbar} friends={props.state.friendsBar.friends}/>
+        <Route path="/profile" render={ () => <Profile profilePage={props.state.profilePage} dispatch={props.dispatch}/>}/>
+        <Route path="/messages" render={ () => <Dialogs dialogs={props.state.dialogsPage.dialogs} messages={props.state.dialogsPage.messages} friendMessages={props.state.dialogsPage.friendMessages} store={props.store}/>}/>
+
         <Route path="/news" render={ () => <News/>}/>
         <Route path="/music" render={ () => <Music/>}/>
         <Route path="/settings" render={ () => <Settings/>}/>
       </div>
   );
+
 }
 
 export default App;

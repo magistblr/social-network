@@ -1,15 +1,33 @@
+import { sendMessageCreator, updateNewMessageBodyCreator } from "../../../redux/state";
+
 
 const NewMessage = (props) => {
+console.log(props);
+  let state = props.store.getState().dialogsPage;
 
+  let newMessageBody = state.newMessageBody;
 
+  let onSendMessageClick = () => {
+    props.store.dispatch(sendMessageCreator());
+  }
+
+  let onNewMessageChange = (e) => {
+    let body = e.target.value;
+    props.store.dispatch(updateNewMessageBodyCreator(body));
+  }
 
   return (
           <div className="new-message-wrapper">
             <div className="new-message">
-              <textarea name="text" placeholder="text" wrap="soft"/>
+              <textarea
+              value={newMessageBody}
+              onChange={onNewMessageChange}
+              name="text"
+              placeholder="Enter your next"
+              wrap="soft"/>
             </div>
             <div className="new-message__btn">
-              <button>Send</button>
+              <button onClick={onSendMessageClick}>Send</button>
             </div>
           </div>
   )

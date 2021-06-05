@@ -1,6 +1,11 @@
 import React from 'react';
-
+import { addPostActionCreator, updatePostNextActionCreator } from '../../../redux/state';
 import Post from "./Post/Post";
+
+
+
+
+
 
 const MyPosts = (props) => {
 
@@ -8,18 +13,18 @@ const MyPosts = (props) => {
 
   let newPostElement = React.createRef();
 
-
-
   let addPost = () => {
-    props.addPost();
-    props.updateNewPostText('');
+    props.dispatch(addPostActionCreator());
   }
+
 
   //при вводе данных отправляет данные в state
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    props.updateNewPostText(text);
+    let action = updatePostNextActionCreator(text);
+    props.dispatch(action);
   }
+
 
   return (
     <div className="content__posts">
@@ -29,9 +34,7 @@ const MyPosts = (props) => {
           onChange={onPostChange}
           ref={newPostElement}
           value={props.newPostText}
-          name="text"
-          placeholder="your news..."
-          wrap="soft"/>
+          placeholder="your news..."/>
       </div>
       <div className="posts__btn">
         <button onClick={addPost}>Send</button>

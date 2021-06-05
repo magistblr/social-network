@@ -9,7 +9,7 @@ import FriendMessage from "./Message/FriendMessage";
 
 
 const Dialogs = (props) => {
-
+console.log(props);
 
   let dialogsElements = props.dialogs.map( dialog => <DialogItem name={dialog.name} id={dialog.id}/>);
 
@@ -24,9 +24,9 @@ const Dialogs = (props) => {
         {dialogsElements}
       </div>
       <div>
-        {messagesElements}
         {friendMessagesElements}
-        <NewMessage/>
+        {messagesElements}
+        <NewMessage store={props.store}/>
       </div>
     </div>
   )

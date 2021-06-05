@@ -2,6 +2,8 @@ import MyPosts from "./MyPosts/MyPosts";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = (props) => {
+  console.log(props);
+
   return (
     <div className="content">
       <header className="content__header">
@@ -12,9 +14,8 @@ const Profile = (props) => {
         <ProfileInfo/>
         <MyPosts
           posts={props.profilePage.posts}
-          addPost={props.addPost}
-          updateNewPostText={props.updateNewPostText}
-          newPostText={props.profilePage.newPostText}/>
+          newPostText={props.profilePage.newPostText}
+          dispatch={props.dispatch}/>
       </div>
     </div>
   );
