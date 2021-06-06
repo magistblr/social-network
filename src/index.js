@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import store from "./redux/state"
+import store from "./redux/reduxStore"
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
@@ -19,7 +19,7 @@ let rerenderEntireTree = (state) => {
 rerenderEntireTree(store.getState());
 
 //перерисовка всего app после каждого действия
-store.subscribe(rerenderEntireTree);
-
-
-
+store.subscribe( () => {
+  let state = store.getState();
+  rerenderEntireTree(state);
+});

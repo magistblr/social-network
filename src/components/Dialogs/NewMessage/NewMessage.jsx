@@ -1,5 +1,5 @@
-import { sendMessageCreator, updateNewMessageBodyCreator } from "../../../redux/state";
-
+import React from 'react'
+import { sendMessageCreator, updateNewMessageBodyCreator} from "../../../redux/dialogsReducer";
 
 const NewMessage = (props) => {
 console.log(props);

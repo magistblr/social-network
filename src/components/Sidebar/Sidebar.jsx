@@ -1,9 +1,10 @@
+import React from 'react';
+
 import Navbar from "./Navbar/Navbar"
 import Friends from "./Friends/Friends"
 
 
 const Sidebar = (props) => {
-
   let navElements = props.navbar.map( items => <Navbar url={items.url} name={items.name} id={items.id}/>);
 
   let friendsElements = props.friends.map( items => <Friends name={items.name} id={items.id}/>);

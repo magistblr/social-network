@@ -1,3 +1,5 @@
+import React from 'react';
+
 import logo from "../../assets/img/soc_logo.png";
 
 
