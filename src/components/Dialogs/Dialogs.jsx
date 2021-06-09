@@ -2,20 +2,18 @@
 import React from 'react';
 import Message from "./Message/Message";
 import DialogItem from "./DialogItem/DialogItem";
-import NewMessage from "./NewMessage/NewMessage";
 import FriendMessage from "./Message/FriendMessage";
-
-
+import NewMessageContainer from './NewMessage/NewMessageContainer';
 
 
 const Dialogs = (props) => {
-console.log(props);
+  let state = props.dialogsPage;
 
-  let dialogsElements = props.dialogs.map( dialog => <DialogItem name={dialog.name} id={dialog.id}/>);
+  let dialogsElements = state.dialogs.map( d => <DialogItem name={d.name} id={d.id}/>);
 
-  let messagesElements = props.messages.map( messages => <Message message={messages.message} id={messages.id}/>);
+  let messagesElements = state.messages.map( m => <Message message={m.message} id={m.id}/>);
 
-  let friendMessagesElements = props.friendMessages.map( friendMessages => <FriendMessage message={friendMessages.message} id={friendMessages.id}/>);
+  let friendMessagesElements = state.friendMessages.map( f => <FriendMessage message={f.message} id={f.id}/>);
 
   return (
     <div className="dialogs-wrapper">
@@ -26,7 +24,7 @@ console.log(props);
       <div>
         {friendMessagesElements}
         {messagesElements}
-        <NewMessage store={props.store}/>
+        <NewMessageContainer/>
       </div>
     </div>
   )

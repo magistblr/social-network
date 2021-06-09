@@ -1,5 +1,4 @@
 import React from 'react';
-import { addPostActionCreator, updatePostNextActionCreator } from '../../../redux/profileReducer';
 import Post from "./Post/Post";
 
 
@@ -8,21 +7,19 @@ import Post from "./Post/Post";
 
 
 const MyPosts = (props) => {
-
   let postsElements = props.posts.map( posts => <Post message={posts.message}/>);
 
   let newPostElement = React.createRef();
 
-  let addPost = () => {
-    props.dispatch(addPostActionCreator());
+  let onAddPost = () => {
+    props.addPost();
   }
 
 
   //при вводе данных отправляет данные в state
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    let action = updatePostNextActionCreator(text);
-    props.dispatch(action);
+    props.updateNewPostText(text);
   }
 
 
@@ -37,7 +34,7 @@ const MyPosts = (props) => {
           placeholder="your news..."/>
       </div>
       <div className="posts__btn">
-        <button onClick={addPost}>Send</button>
+        <button onClick={onAddPost}>Send</button>
       </div>
         {postsElements}
     </div>

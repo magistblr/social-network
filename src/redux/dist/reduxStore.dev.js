@@ -27,5 +27,6 @@ var reducers = (0, _redux.combineReducers)({
   friendsBar: _friendsBarReducer["default"]
 });
 var store = (0, _redux.createStore)(reducers);
+window.store = store;
 var _default = store;
 exports["default"] = _default;

@@ -1,11 +1,9 @@
 import React from 'react';
 
-import MyPosts from "./MyPosts/MyPosts";
+import MyPostsContainer from './MyPosts/MyPostsContainer';
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = (props) => {
-  console.log(props);
-
   return (
     <div className="content">
       <header className="content__header">
@@ -14,10 +12,7 @@ const Profile = (props) => {
 
       <div className="content__wrapper">
         <ProfileInfo/>
-        <MyPosts
-          posts={props.profilePage.posts}
-          newPostText={props.profilePage.newPostText}
-          dispatch={props.dispatch}/>
+        <MyPostsContainer/>
       </div>
     </div>
   );

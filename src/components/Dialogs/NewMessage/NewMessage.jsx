@@ -1,20 +1,17 @@
 import React from 'react'
-import { sendMessageCreator, updateNewMessageBodyCreator} from "../../../redux/dialogsReducer";
 
 const NewMessage = (props) => {
-console.log(props);
-  let state = props.store.getState().dialogsPage;
-
-  let newMessageBody = state.newMessageBody;
+  let newMessageBody = props.newMessageBody;
 
   let onSendMessageClick = () => {
-    props.store.dispatch(sendMessageCreator());
+    props.sendMessage();
   }
 
   let onNewMessageChange = (e) => {
     let body = e.target.value;
-    props.store.dispatch(updateNewMessageBodyCreator(body));
+    props.updateNewMessageBody(body);
   }
+
 
   return (
           <div className="new-message-wrapper">

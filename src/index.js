@@ -4,22 +4,22 @@ import store from "./redux/reduxStore"
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 
 
 
-let rerenderEntireTree = (state) => {
   ReactDOM.render(
     <BrowserRouter>
-      <App state={state} dispatch={store.dispatch.bind(store)} store={store}/>
+      <Provider store={store}>
+        <App />
+      </Provider>
     </BrowserRouter>, document.getElementById('root'));
-}
 
-//запускается первая функция
-rerenderEntireTree(store.getState());
+// //запускается первая функция
+// rerenderEntireTree();
 
-//перерисовка всего app после каждого действия
-store.subscribe( () => {
-  let state = store.getState();
-  rerenderEntireTree(state);
-});
+// //перерисовка всего app после каждого действия
+// // store.subscribe( () => {
+// //   rerenderEntireTree();
+// // });
