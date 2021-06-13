@@ -10,6 +10,10 @@ import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import SidebarContainer from './components/Sidebar/SidebarContainer';
+<<<<<<< HEAD
+=======
+import UsersContainer from './components/Users/UsersContainer';
+>>>>>>> second
 
 
 const App = (props) => {
@@ -21,6 +25,10 @@ const App = (props) => {
         <div className="content-wrapper">
           <Route path="/profile" render={ () => <Profile />}/>
           <Route path="/messages" render={ () => <DialogsContainer/>}/>
+<<<<<<< HEAD
+=======
+          <Route path="/users" render={ () => <UsersContainer/>}/>
+>>>>>>> second
           <Route path="/news" render={ () => <News/>}/>
           <Route path="/music" render={ () => <Music/>}/>
           <Route path="/settings" render={ () => <Settings/>}/>

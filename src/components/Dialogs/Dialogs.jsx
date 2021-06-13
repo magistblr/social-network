@@ -9,11 +9,19 @@ import NewMessageContainer from './NewMessage/NewMessageContainer';
 const Dialogs = (props) => {
   let state = props.dialogsPage;
 
+<<<<<<< HEAD
   let dialogsElements = state.dialogs.map( d => <DialogItem name={d.name} id={d.id}/>);
 
   let messagesElements = state.messages.map( m => <Message message={m.message} id={m.id}/>);
 
   let friendMessagesElements = state.friendMessages.map( f => <FriendMessage message={f.message} id={f.id}/>);
+=======
+  let dialogsElements = state.dialogs.map( d => <DialogItem name={d.name} id={d.id} key={d.id}/>);
+
+  let messagesElements = state.messages.map( m => <Message message={m.message} id={m.id} key={m.id}/>);
+
+  let friendMessagesElements = state.friendMessages.map( f => <FriendMessage message={f.message} id={f.id} key={f.id}/>);
+>>>>>>> second
 
   return (
     <div className="dialogs-wrapper">

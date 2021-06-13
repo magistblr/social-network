@@ -15,6 +15,10 @@
 @import "/src/components/Dialogs/Message/FriendMessage.css";
 @import "/src/components/Dialogs/NewMessage/NewMessage.css";
 @import "/src/components/Profile/ProfileInfo/ProfileInfo.css";
+<<<<<<< HEAD
+=======
+@import "/src/components/Users/Users.css";
+>>>>>>> second
 @import '/src/fonts.css';
 
 * {

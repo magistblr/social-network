@@ -86,5 +86,8 @@ export default store;
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> second
