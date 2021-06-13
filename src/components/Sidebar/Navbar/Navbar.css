@@ -1,0 +1,22 @@
+
+
+.navbar__list {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.navbar__list-item {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.navbar__list-item a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.navbar__list-item a.active {
+  color: gold;
+}
+

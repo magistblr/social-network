@@ -1,0 +1,51 @@
+.new-message-wrapper {
+  margin-top: 30px;
+  padding-left: 30px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+
+
+
+.new-message textarea {
+  background-color: rgb(218, 219, 219);
+  font-size: 15px;
+  border: none;
+  width: 740px;
+  min-height: 70px;
+  outline: none;
+  resize: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
+.new-message__btn {
+  width: 70px;
+  margin-top: 10px;
+  margin-left: auto;
+}
+
+
+.new-message-wrapper button {
+  font-size: 20px;
+  color: white;
+  border:none;
+  background-color: rgb(60, 179, 36);
+  width: 70px;
+  height: 40px;
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 10px;
+  margin: 0 auto;
+
+}
+
+.new-message-wrapper button:hover {
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.new-message-wrapper button:active {
+  transform: scale(0.9)
+}

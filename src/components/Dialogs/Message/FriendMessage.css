@@ -1,0 +1,45 @@
+
+.dialogs__users-wrapper-friend {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 30px 0px;
+  margin-top: 10px;
+  max-width: 800px;
+  box-sizing: border-box;
+}
+
+.dialogs__users-friend {
+  margin-right: 40px;
+  text-align: center;
+}
+
+
+.dialogs__users-friend img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+
+.dialogs__users-message-friend {
+  position: relative;
+  font-size: 17px;
+  min-height: 50px;
+  width: 580px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgb(173, 173, 173);
+}
+
+.dialogs__users-message-friend::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 35px;
+  border: 1px solid;
+  border: none;
+  transform: rotate(45deg);
+  top: 5px;
+  left: -12px;
+  border-radius: 5px;
+  background-color: rgb(173, 173, 173);
+}

@@ -1,0 +1,47 @@
+@import "/src/components/Header/Header.css";
+@import "/src/components/Sidebar/Sidebar.css";
+@import "/src/components/Sidebar/Navbar/Navbar.css";
+@import "/src/components/Sidebar/Friends/Friends.css";
+@import "/src/components/Profile/Profile.css";
+@import "/src/components/Profile/MyPosts/MyPosts.css";
+@import "/src/components/Profile/MyPosts/Post/Post.css";
+@import "/src/components/News/News.css";
+@import "/src/components/Settings/Settings.css";
+@import "/src/components/Music/Music.css";
+@import "/src/components/News/News.css";
+@import "/src/components/Dialogs/Dialogs.css";
+@import "/src/components/Dialogs/DialogItem/DialogItem.css";
+@import "/src/components/Dialogs/Message/Message.css";
+@import "/src/components/Dialogs/Message/FriendMessage.css";
+@import "/src/components/Dialogs/NewMessage/NewMessage.css";
+@import "/src/components/Profile/ProfileInfo/ProfileInfo.css";
+@import "/src/components/Users/Users.css";
+@import '/src/fonts.css';
+
+* {
+  font-family: 'Proxima Nova';
+}
+
+
+.app-wrapper {
+  display: block;
+  margin: 0 300px 0 300px;
+  width: 1100px;
+}
+
+.app-wrapper-inner {
+  display: grid;
+  grid-template-areas:
+            'header header'
+            'navbar content';
+  grid-gap: 10px;
+  grid-template-columns: 250px 100%;
+  grid-template-rows: 70px 1fr;
+
+}
+
+.item {
+  padding: 10px;
+}
+
+
