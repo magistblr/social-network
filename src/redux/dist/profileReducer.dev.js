@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = exports.updatePostNextActionCreator = exports.addPostActionCreator = void 0;
+exports["default"] = exports.updatePostNextActionCreator = exports.setUserProfile = exports.addPostActionCreator = void 0;
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
 
@@ -21,6 +21,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var ADD_POST = 'ADD_POST';
 var UPDATE_NEW_POST_TEXT = 'UPDATE_NEW_POST_TEXT';
+var SET_USER_PROFILE = 'SET_USER_PROFILE';
 var initialState = {
   posts: [{
     id: 1,
@@ -29,7 +30,8 @@ var initialState = {
     id: 2,
     message: "It's my first post"
   }],
-  newPostText: ''
+  newPostText: '',
+  profile: null
 };
 
 var profileReducer = function profileReducer() {
@@ -56,6 +58,13 @@ var profileReducer = function profileReducer() {
         });
       }
 
+    case SET_USER_PROFILE:
+      {
+        return _objectSpread({}, state, {
+          profile: action.profile
+        });
+      }
+
     default:
       return state;
   }
@@ -68,6 +77,15 @@ var addPostActionCreator = function addPostActionCreator() {
 };
 
 exports.addPostActionCreator = addPostActionCreator;
+
+var setUserProfile = function setUserProfile(profile) {
+  return {
+    type: SET_USER_PROFILE,
+    profile: profile
+  };
+};
+
+exports.setUserProfile = setUserProfile;
 
 var updatePostNextActionCreator = function updatePostNextActionCreator(text) {
   return {

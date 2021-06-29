@@ -7,24 +7,21 @@ import Post from "./Post/Post";
 
 
 const MyPosts = (props) => {
-<<<<<<< HEAD
-  let postsElements = props.posts.map( posts => <Post message={posts.message}/>);
-=======
   let postsElements = props.posts.map( posts => <Post message={posts.message} key={posts.id}/>);
->>>>>>> second
 
   let newPostElement = React.createRef();
-
-  let onAddPost = () => {
-    props.addPost();
-  }
-
 
   //при вводе данных отправляет данные в state
   let onPostChange = () => {
     let text = newPostElement.current.value;
     props.updateNewPostText(text);
   }
+
+  let onAddPost = () => {
+    props.addPost();
+  }
+
+
 
 
   return (

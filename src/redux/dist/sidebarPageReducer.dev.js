@@ -15,14 +15,18 @@ var initialState = {
     url: '/messages'
   }, {
     id: 3,
+    name: 'Users',
+    url: '/users'
+  }, {
+    id: 4,
     name: 'News',
     url: '/news'
   }, {
-    id: 4,
+    id: 5,
     name: 'Music',
     url: '/music'
   }, {
-    id: 5,
+    id: 6,
     name: 'Settings',
     url: '/settings'
   }]

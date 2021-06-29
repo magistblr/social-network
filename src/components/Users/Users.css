@@ -29,6 +29,12 @@
   cursor: pointer;
 }
 
+.users__logo button[disabled] {
+  background-color: rgb(80, 80, 80);
+  opacity: 0.6;
+}
+
+
 .users__descr-wrapper-outer {
   width: 100%;
   padding: 10px;
@@ -67,10 +73,26 @@
 }
 
 
+.users__pagination {
+  display: flex;
 
+}
+
+.users__pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:rgb(109, 179, 109);
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 100%;
+
+}
 
 .users__pagination span {
-  margin-left: 20px;
   cursor: pointer;
 }
 

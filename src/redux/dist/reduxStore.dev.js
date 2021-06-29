@@ -19,6 +19,10 @@ var _friendsBarReducer = _interopRequireDefault(require("./friendsBarReducer"));
 
 var _usersReducer = _interopRequireDefault(require("./usersReducer"));
 
+var _authRedux = _interopRequireDefault(require("./auth-redux"));
+
+var _reduxThunk = _interopRequireDefault(require("redux-thunk"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var reducers = (0, _redux.combineReducers)({
@@ -27,9 +31,10 @@ var reducers = (0, _redux.combineReducers)({
   sidebarPage: _sidebarPageReducer["default"],
   sidebar: _sidebarReducer["default"],
   friendsBar: _friendsBarReducer["default"],
-  usersPage: _usersReducer["default"]
+  usersPage: _usersReducer["default"],
+  auth: _authRedux["default"]
 });
-var store = (0, _redux.createStore)(reducers);
+var store = (0, _redux.createStore)(reducers, (0, _redux.applyMiddleware)(_reduxThunk["default"]));
 window.store = store;
 var _default = store;
 exports["default"] = _default;
